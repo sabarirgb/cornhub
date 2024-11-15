@@ -42,10 +42,20 @@
 <body>
     <div class="container">
         <h1>Welcome to My Simple Site</h1>
-        <input type="text" placeholder="Enter text here">
+        <input type="text" id="nameInput" placeholder="Enter your name">
         <br>
-        <button onclick="alert('Button clicked!')">Submit</button>
+        <button onclick="greetUser()">Submit</button>
     </div>
+
+    <script>
+        function greetUser() {
+            const name = document.getElementById('nameInput').value;
+            if (name) {
+                alert('Hello, ' + name + '! Welcome to the site!');
+            } else {
+                alert('Please enter your name.');
+            }
+        }
+    </script>
 </body>
 </html>
-
