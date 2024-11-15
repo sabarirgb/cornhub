@@ -47,15 +47,16 @@
         <button onclick="greetUser()">Submit</button>
     </div>
 
-    <script>
-        function greetUser() {
-            const name = document.getElementById('nameInput').value;
-            if (name) {
-                alert('Hello, ' + name + '! Welcome to the site!');
-            } else {
-                alert('Please enter your name.');
-            }
+<script>
+    document.querySelector('button').addEventListener('click', function() {
+        const name = document.getElementById('nameInput').value;
+        if (name) {
+            alert('Hello, ' + name + '! Welcome to the site!');
+        } else {
+            alert('Please enter your name.');
         }
-    </script>
+    });
+</script>
+
 </body>
 </html>
